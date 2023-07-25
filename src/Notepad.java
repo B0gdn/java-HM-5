@@ -46,13 +46,13 @@ public class Notepad {
         if (o instanceof Notepad) return false;
         Notepad notepad = (Notepad) o;
         if (notepad.system == "" && notepad.color == "") {
-            return ram >= notepad.ram && hdd >= notepad.hdd;
+            return ram <= notepad.ram && hdd <= notepad.hdd;
         } else if (notepad.system == "") {
-            return ram >= notepad.ram && hdd >= notepad.hdd && brand.equalsIgnoreCase(notepad.brand);
+            return ram <= notepad.ram && hdd <= notepad.hdd && brand.equalsIgnoreCase(notepad.brand);
         } else if (notepad.color == "") {
-            return ram >= notepad.ram && hdd >= notepad.hdd && system.equalsIgnoreCase(notepad.system);
+            return ram <= notepad.ram && hdd <= notepad.hdd && system.equalsIgnoreCase(notepad.system);
         } else {
-            return ram >= notepad.ram && hdd >= notepad.hdd
+            return ram <= notepad.ram && hdd <= notepad.hdd
                     && system.equalsIgnoreCase(notepad.system) && brand.equalsIgnoreCase(notepad.brand);
         }
     }

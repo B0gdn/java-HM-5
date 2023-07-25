@@ -99,7 +99,6 @@ public class Main {
                 case 5:
                     System.out.println("Результат: ");
                     Notepad findNotepad = new Notepad(findRam, findHdd, findOs, findColor);
-                    System.out.println(findNotepad);
                     for (Notepad find: set) {
                         if (find.equals(findNotepad)) {
                             map.put(find.uid ,find);
